@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: engineering-tool
+Version: 0.0.1
+Summary: This engineering tool lib
+Home-page: https://github.com/pinyoothotaboot/engineering_tool
+Author: Mr.Pinyoo Thotaboot
+Author-email: pinyoo.too@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
