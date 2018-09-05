@@ -282,13 +282,13 @@ class Pressure:
         return pascal * (1/(d*e))
     
     """
-        Function    : PascalTommHg
+        Function    : BarTommHg
         Description : This function to convert pressure from Pascal to mmHg.
-        Formula     : pascal x ( 1 / ( 13.5951 x 9.80665 ))
+        Formula     : bar x (100000/(13.5951 x 9.80665))
         Input       : 
                       - Pascal number type integer or float
         Return      : Pressure mmHg in type interger or float
-        Example     : PascalTommHg(0)
+        Example     : BarTommHg(0)
                     >> 0
     """
     def BarTommHg(bar):
@@ -402,6 +402,7 @@ class Pressure:
         Return      : Pressure PSI in type interger or float
         Example     : PascalToPsi(0)
                     >> 0
+
     """
     def PascalToPsi(pascal):
         if type(pascal) not in [int,float]:
