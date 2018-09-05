@@ -105,9 +105,9 @@ Pressure formula:
 
 	p1 = Pressure.ForceAndArea(force,area)
 
-	**print**("Pressure is %.2f Pascal"%p1)
+	print("Pressure is %.2f Pascal"%p1)
 
-	**print**("Pressure is %.2f Bar"%Pressure.PascalToBar(p1))
+	print("Pressure is %.2f Bar"%Pressure.PascalToBar(p1))
 
 **def** KineticPressure():
 
@@ -119,9 +119,9 @@ Pressure formula:
     
 	p = Pressure.KineticMass(volume,velocity,mass)
 
-	**print**("Pressure is %.3f Pascal"%p)
+	print("Pressure is %.3f Pascal"%p)
 
-	**print**("Pressure is %f atm"%Pressure.PascalToAtm(p))
+	print("Pressure is %f atm"%Pressure.PascalToAtm(p))
 
 **def** PotentialPressure():
 
@@ -133,9 +133,9 @@ Pressure formula:
 
 	p = Pressure.PotentialMass(volume,mass,height)
 
-	**print**("Pressure is %.3f Pascal"%p)
+	print("Pressure is %.3f Pascal"%p)
 
-	**print**("Pressure is %.4f Torr"%Pressure.PascalToTorr(p))
+	print("Pressure is %.4f Torr"%Pressure.PascalToTorr(p))
 	
 **def** GasPressure():
 
@@ -149,8 +149,8 @@ Pressure formula:
 
 	p = Pressure.Gas(volume,n,R,T)
 
-	**print**("Pressure is %f atm"%p)
-    
-	**print**("Pressure is %f psi"%Pressure.AtmToPsi(p))
+	print("Pressure is %f atm"%p)
+
+	print("Pressure is %f psi"%Pressure.AtmToPsi(p))
 
 
