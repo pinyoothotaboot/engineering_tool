@@ -1,9 +1,10 @@
-from engineering_tool.electrics import Power
+
+from engineering_tool.areas import *
 
 
-V = 15
-I =2
+base = 10 
+height = 20
 
-P = Power.VoltageAndCurrent(V,I)
+area = Area.triangle(base,height)
 
-print("Power is %f"%P)
+print("Area triangle is %.2f"%area)

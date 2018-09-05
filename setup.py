@@ -30,5 +30,5 @@ setup(
         "Intended Audience :: Developers",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    packages=find_packages()
+    packages=['engineering_tool']
 )
