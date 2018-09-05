@@ -55,6 +55,42 @@
 - Irregular
 
 	![V = Ah](https://latex.codecogs.com/svg.latex?V%20=%20Ah)
-    
+
 	- A : Area
 	- h : Height
+
+# Example
+
+**from** engineering_tool.volumes **import** *
+
+radius1 = 15.5         # cm
+
+radius2 = 16.7         # 
+
+radius3 =  17.8        # cm
+
+base =  20                # cm
+
+height = 30              # cm
+
+wide     = 40             # cm
+
+A   =    10                  # cm2
+
+**print**("Sphere is %.3f cm3"%Volume.sphere(radius1))
+
+**print**("Cube is %.3f cm3"%Volume.cube(base))
+
+**print**("Rectangular is %.3f cm3"%Volume.rectangular(wide,base,height))
+
+**print**("Cylinder is %.3f cm3"%Volume.cylinder(radius2,height))
+
+**print**("Pyramid is %.3f cm3"%Volume.pyramid(base,height))
+
+**print**("Cone is %.3f cm3"%Volume.cone(radius3,height))
+
+**print**("Triangular is %.3f"%Volume.triangular(base,height,wide))
+
+**print**("Ellipsoid is %.3f"%Volume.ellipsoid(radius1,radius2,radius3))
+
+**print**("Irregular is %.3f"%Volume.irregular(A,height))
