@@ -1,6 +1,23 @@
 # Definition
 Pressure - the amount of force that is applied to an area where the force is distributed. The metric system unit used to describe pressure is the pascal (Pa) which translates to newtons per square meter. The symbol of pressure is p
 Pressure formula:
+    ![P = \frac{F}{A}=\frac{W}{V}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{F}{A}=\frac{W}{V})
+	- P : Pressure
+	- F  : Force
+	- A : Area
+	- W : Energy
+	- V : Volume
+	
+**Kinetic of pressure**
+    ![P = \frac{({\frac{1}{2}}\cdot{m}\cdot{v^2})}{V}=\frac{1}{2}\cdot{p}\cdot{v^2}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{({\frac{1}{2}}\cdot{m}\cdot{v^2})}{V}=\frac{1}{2}\cdot{p}\cdot{v^2})
+	- m : Mass
+	- v : Velocity
+	- p : Density
+	
+**Potential of pressure**
+    ![P = \frac{{m}\cdot{g}\cdot{h}}{V}={p}\cdot{g}\cdot{h}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{{m}\cdot{g}\cdot{h}}{V}={p}\cdot{g}\cdot{h})
+	- g  : Gravity 9.8 m/s^2
+	- h  : Heigh
 
 # Units of measurement
     Atmosphere (atm) 
