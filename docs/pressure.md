@@ -9,16 +9,22 @@ Pressure formula:
     - W : Energy
     - V : Volume
 	
-**Kinetic of pressure**
+**Pressure of kinetic**
 - ![P = \frac{({\frac{1}{2}}\cdot{m}\cdot{v^2})}{V}=\frac{1}{2}\cdot{p}\cdot{v^2}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{({\frac{1}{2}}\cdot{m}\cdot{v^2})}{V}=\frac{1}{2}\cdot{p}\cdot{v^2})
     - m : Mass
     - v : Velocity
     - p : Density
 	
-**Potential of pressure**
+**Pressure of potential**
 - ![P = \frac{{m}\cdot{g}\cdot{h}}{V}={p}\cdot{g}\cdot{h}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{{m}\cdot{g}\cdot{h}}{V}={p}\cdot{g}\cdot{h})
     - g  : Gravity 9.8 m/s^2
     - h  : Heigh
+**Pressure of gas**
+- ![P=\frac{n\cdot R \cdot T}{V}](https://latex.codecogs.com/svg.latex?[P=\frac{n\cdot%20R%20\cdot%20T}{V})
+	- n : Gas mol
+	- R : Gas constant
+	- T : Tempearture
+
 
 # Units of measurement
 - Atmosphere (atm) 
@@ -64,3 +70,41 @@ Pressure formula:
     - ![bar = {psi}\cdot(\frac{6.8948}{100})](https://latex.codecogs.com/svg.latex?bar%20=%20{psi}\cdot(\frac{6.8948}{100}))
     - ![atm = {psi}\cdot(\frac{6.8046}{100})](https://latex.codecogs.com/svg.latex?atm%20=%20{psi}\cdot(\frac{6.8046}{100}))
     - ![torr = {psi}\cdot{51.71493}](https://latex.codecogs.com/svg.latex?torr%20=%20{psi}\cdot{51.71493})
+
+# Example
+
+**from** engineering_tool.pressures **import** *
+
+**def** SimplePressure():
+			force = 500   # N
+			area  = 4.5     # m^2
+			p1 = Pressure.ForceAndArea(force,area)
+			**print**("Pressure is %.2f Pascal"%p1)
+			**print**("Pressure is %.2f Bar"%Pressure.PascalToBar(p1))
+
+**def** KineticPressure():
+			volume = 4  # Cubic
+			velocity  =  10.5 . # m/s
+			mass       =  50   # Kg
+			p = Pressure.KineticMass(volume,velocity,mass)
+			**print**("Pressure is %.3f Pascal"%p)
+			**print**("Pressure is %f atm"%Pressure.PascalToAtm(p))
+
+**def** PotentialPressure():
+			volume    = 4   # Cubic
+			mass        = 100   # Kg
+			height      = 300   # Metre
+			p = Pressure.PotentialMass(volume,mass,height)
+			**print**("Pressure is %.3f Pascal"%p)
+			**print**("Pressure is %.4f Torr"%Pressure.PascalToTorr(p))
+	
+**def** GasPressure():
+			volume = 4            # Lite
+			n            = 0.056    # mol		
+			R            = 0.08206    # (Lite x atm)/(mol x K)
+			T            = 500       # K
+			p = Pressure.Gas(volume,n,R,T)
+			**print**("Pressure is %f atm"%p)
+			**print**("Pressure is %f psi"%Pressure.AtmToPsi(p))
+
+
