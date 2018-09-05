@@ -1,8 +1,7 @@
 # Definition
 Pressure - the amount of force that is applied to an area where the force is distributed. The metric system unit used to describe pressure is the pascal (Pa) which translates to newtons per square meter. The symbol of pressure is p
-
-
 Pressure formula:
+
 # Units of measurement
     Atmosphere (atm) 
     Bar (b) 
@@ -24,3 +23,4 @@ Pressure formula:
     $$torr = {bar}\cdot\frac{\left(760\cdot{100000}\right)}{101325}$$
     $$mmhg={bar}\cdot\frac{100000}{13.5951\cdot9.80665}$$
     $$psi={bar}\cdot{14.50377}$$
+    ![\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}](https://latex.codecogs.com/svg.latex?x%3D%5Cfrac%7B-b%5Cpm%5Csqrt%7Bb%5E2-4ac%7D%7D%7B2a%7D)
