@@ -33,3 +33,19 @@
 
 	- b1 : Base parallel sides
 	- b2 : Base parallel sides
+
+# Example
+
+**from** engineering_tool.areas **import** *
+
+radius = 15.5         # cm
+base1 =  20           # cm
+base2 =  25           # cm
+height = 30           # cm
+
+**print**("Circle area is %.2f cm2"%Area.circle(radius))
+**print**("Rectangle area is %.2f cm2"%Area.rectangle(base1,height))
+**print**("Square area is %.2f cm2"%Area.square(base2))
+**print**("Triangle area is %.2f cm2"%Area.triangle(base2,height))
+**print**("Parallelogram area is %.2f cm2"%Area.parallelogram(base1,height))
+**print**("Trapezoid area is %.2f cm2"%Area.trapezoid(base1,base2,height))
