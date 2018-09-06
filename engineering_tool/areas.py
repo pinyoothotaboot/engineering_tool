@@ -3,6 +3,30 @@ import math
 class Area:
 
     """
+        Function    : circlesector
+        Description : This function to calculate area of circle sector.
+        Formula     : degree/2 x radius^2
+        Input       : 
+                      - Radius number type integer or float
+                      - Degree number type integer or float
+        Return      : Area of circle sector in type interger or float
+        Example     : circlesector(1)
+                    >> 3.1416
+    """
+    def circlesector(radius,degree):
+        if type(radius) not in [int,float]:
+            raise TypeError("The radius must be a non-negative real number.")
+        if type(degree) not in [int,float]:
+            raise TypeError("The degree must be a non-negative real number.")
+
+        if radius < 0:
+            raise ValueError("The radius cannot be negative.")
+        if degree < 0:
+            raise ValueError("The degree cannot be negative.")
+
+        return (degree/2)*(radius**2)
+    
+    """
         Function    : circle
         Description : This function to calculate area of circle.
         Formula     : PI * Radius^2
@@ -88,6 +112,90 @@ class Area:
         return 0.5 * base * height
     
     """
+        Function    : equilateral
+        Description : This function to calculate area of equilateral triangle.
+        Formula     : sqrt(3)/4 x s^2
+        Input       : 
+                      - S number type integer or float
+        Return      : Area of equilateral triangle in type interger or float
+        Example     : equilateral(0)
+                    >> 0
+    """
+    def equilateral(s):
+
+        if type(s) not in [int,float]:
+            raise TypeError("The s side must be a non-negative real number.")
+        
+        if s < 0:
+            raise ValueError("The s side cannot be negative.")
+
+        return (math.sqrt(3)/4) * (s**2)
+
+    """
+        Function    : isosceles
+        Description : This function to calculate area of isosceles triangle.
+        Formula     : b/4 x sqrt(4a^2 - b^2)
+        Input       : 
+                      - A  number type integer or float
+                      - B  number type integer or float
+        Return      : Area of isosceles triangle in type interger or float
+        Example     : isosceles(0,0)
+                    >> 0
+    """
+    def isosceles(a,b):
+        if type(a) not in [int,float]:
+            raise TypeError("The a side must be a non-negative real number.")
+
+        if type(b) not in [int,float]:
+            raise TypeError("The b side must be a non-negative real number.")
+
+        if a < 0:
+            raise ValueError("The a side cannot be negative.")
+
+        if b < 0:
+            raise ValueError("The b side cannot be negative.")
+
+        return (1/4)*b*math.sqrt(4*(a**2)-(b**2))
+    
+    """
+        Function    : hexagon
+        Description : This function to calculate area of regular hexagon.
+        Formula     : 3/2 x sqrt(3) x s^2
+        Input       : 
+                      - S number type integer or float
+        Return      : Area of regular hexagon in type interger or float
+        Example     : hexagon(0)
+                    >> 0
+    """
+    def hexagon(s):
+        if type(s) not in [int,float]:
+            raise TypeError("The s side must be a non-negative real number.")
+        
+        if s < 0:
+            raise ValueError("The s side cannot be negative.")
+
+        return (3/2)*math.sqrt(3)*(s**2)
+    
+    """
+        Function    : octagon
+        Description : This function to calculate area of regular octagon.
+        Formula     : 2 x (1+sqrt(2)) x s^2
+        Input       : 
+                      - S number type integer or float
+        Return      : Area of regular octagon in type interger or float
+        Example     : octagon(0)
+                    >> 0
+    """
+    def octagon(s):
+        if type(s) not in [int,float]:
+            raise TypeError("The s side must be a non-negative real number.")
+        
+        if s < 0:
+            raise ValueError("The s side cannot be negative.")
+
+        return 2 * (1+math.sqrt(2))*(s**2)
+    
+    """
         Function    : parallelogram
         Description : This function to calculate area of parallelogram.
         Formula     : Base x Height
@@ -141,5 +249,77 @@ class Area:
             raise ValueError("The height cannot be negative.")
 
         return 0.5 * (base1+base2) * height
+    
+    """
+        Function    : cylinder
+        Description : This function to calculate area of surface cylinder.
+        Formula     : 2 x pi x radius x(radius+height)
+        Input       : 
+                      - Radius number type integer or float
+                      - Height number type integer or float
+        Return      : Area of surface cylinder in type interger or float
+        Example     : cylinder(0,0)
+                    >> 0
+    """
+    def cylinder(radius,height):
+        if type(radius) not in [int,float]:
+            raise TypeError("The radius must be a non-negative real number.")
+        if type(height) not in [int,float]:
+            raise TypeError("The height must be a non-negative real number.")
+
+        if radius < 0:
+            raise ValueError("The radius cannot be negative.")
+        if height < 0:
+            raise ValueError("The height cannot be negative.")
+
+        return 2 * math.pi * radius * (radius+height)
+    
+    """
+        Function    : sphere
+        Description : This function to calculate area of surface sphere.
+        Formula     : 4 x pi x radius^2
+        Input       : 
+                      - Radius number type integer or float
+        Return      : Area of surface sphere in type interger or float
+        Example     : sphere(0)
+                    >> 0
+    """
+    def sphere(radius):
+        if type(radius) not in [int,float]:
+            raise TypeError("The radius must be a non-negative real number.")
+
+        if radius < 0:
+            raise ValueError("The radius cannot be negative.")
+
+        return 4 * math.pi * (radius**2)
+    
+    """
+        Function    : pyramid
+        Description : This function to calculate area of surface pyramid.
+        Formula     : B + PL/2
+        Input       : 
+                      - B number type integer or float
+                      - P number type integer or float
+                      - L number type integer or float
+        Return      : Area of surface pyramid in type interger or float
+        Example     : pyramid(1,0,0)
+                    >> 1
+    """
+    def pyramid(B,P,L):
+        if type(B) not in [int,float]:
+            raise TypeError("The Base area must be a non-negative real number.")
+        if type(P) not in [int,float]:
+            raise TypeError("The Petimeter base must be a non-negative real number.")
+        if type(L) not in [int,float]:
+            raise TypeError("The Slant height must be a non-negative real number.")
+
+        if B < 0:
+            raise ValueError("The Base area cannot be negative.")
+        if P < 0:
+            raise ValueError("The Petimeter base cannot be negative.")
+        if L < 0:
+            raise ValueError("The Slant height cannot be negative.")
+
+        return B + (P*L)/2
 
 
