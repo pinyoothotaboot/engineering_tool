@@ -34,3 +34,39 @@ height = 4 # cm
 triangle_area = Area.triangle(base,height)
 print("Triangle area is %.2f cm2"%triangle_area)
 ```
+
+**3.Isosceles triangle area**
+
+![area = \frac{b}{4}\sqrt(4{a^2}-{b^2})](https://latex.codecogs.com/svg.latex?area%20=%20\frac{b}{4}\sqrt(4{a^2}-{b^2}))
+
+**a** is the length of one of the two equal sides and **b** is the length of a different side.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/1/14/Triangle.Isosceles.svg)
+
+```python
+from engineering_tool.areas import Area
+a = 5 # cm
+b = 3 # cm 
+isosceles_area = Area.isosceles(a,b)
+print("Isosceles triangle area is %.2f cm2"%isosceles_area)
+```
+
+**4.Parallelogram area**
+
+![area = bh](https://latex.codecogs.com/svg.latex?area%20=%20bh)
+
+**b** is the length of the base and  **h** is the perpendicular height.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/4/41/Parallelogram.svg)
+
+```python
+from engineering_tool.areas import Area
+base = 7 # cm
+height = 8 # cm 
+parallelogram_area = Area.parallelogram(base,height)
+print("Parallelogram area is %.2f cm2"%parallelogram_area)
+```
