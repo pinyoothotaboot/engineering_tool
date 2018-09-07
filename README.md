@@ -13,7 +13,10 @@ The tool is a physic formula for Engineering or Science : **Python 3.6+**.
 # Setup
 - First : Check python version and PIP version
 ![](docs/images/check_version.png?raw=true)
-
+- Second : Install lib engineering-tool
+![](docs/images/install.png?raw=true)
+- Third : Test lib in python shell
+![](docs/images/example.png?raw=true)
 
 # Example
     from engineering_tool.electrics import Power
