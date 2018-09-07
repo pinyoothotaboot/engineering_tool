@@ -19,6 +19,8 @@ The tool is a physic formula for Engineering or Science : **Python 3.6+**.
 ![](docs/images/example.png?raw=true)
 
 # Example
+:::python
+    import abc
     from engineering_tool.electrics import Power
     voltage = 15 # Volt
     current = 2.5 # Amp
