@@ -18,7 +18,8 @@ equilateral_area = Area.equilateral(s)
 print("Equilateral triangle area is %.2f cm2"%equilateral_area)
 ```
 **2.Triangle area**
-	![area = \frac{1}{2}bh](https://latex.codecogs.com/svg.latex?area%20=%20\frac{1}{2}bh)
+
+![area = \frac{1}{2}bh](https://latex.codecogs.com/svg.latex?area%20=%20\frac{1}{2}bh)
 	
 **b** and  **h** are the base and height (measured perpendicular to the base), respectively.
 
