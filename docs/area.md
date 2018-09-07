@@ -70,3 +70,73 @@ height = 8 # cm
 parallelogram_area = Area.parallelogram(base,height)
 print("Parallelogram area is %.2f cm2"%parallelogram_area)
 ```
+
+**5.Trapezoid**
+
+![area =  \frac{1}{2}(a+b)h](https://latex.codecogs.com/svg.latex?area%20=%20\frac{1}{2}(a+b)h)
+
+**a** and **b** are the parallel sides and  **h** the distance (height) between the parallels.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/1/11/Trapezoid.svg)
+
+```python
+from engineering_tool.areas import Area
+a_base = 7 # cm
+b_base = 10 # cm
+height = 9 # cm 
+trapezoid_area = Area.trapezoid(a_base,b_base,height)
+print("Trapezoid area is %.2f cm2"%trapezoid_area)
+```
+
+**6.Hexagon**
+
+![area=\frac{3}{2}\sqrt(3){s^2}](https://latex.codecogs.com/svg.latex?area=\frac{3}{2}\sqrt(3){s^2})
+
+**s** is the length of one side of the hexagon.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/38/Regular_polygon_6_annotated.svg)
+
+```python
+from engineering_tool.areas import Area
+s = 7 # cm
+hexagon_area = Area.hexagon(s)
+print("Hexagon area is %.2f cm2"%hexagon_area)
+```
+
+**7.Octagon**
+
+$$area={2}(1+\sqrt(2)){s^2}$$
+
+**s** is the length of one side of the octagon.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/e5/Regular_polygon_8_annotated.svg)
+
+```python
+from engineering_tool.areas import Area
+s = 7 # cm
+octagon_area = Area.octagon(s)
+print("Octagon area is %.2f cm2"%octagon_area)
+```
+
+**8.Circle**
+
+![area = \pi{r^2}](https://latex.codecogs.com/svg.latex?area%20=%20\pi\cdot{r^2})
+
+**r** is the radius
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/03/Circle-withsegments.svg)
+
+```python
+from engineering_tool.areas import Area
+radius = 7 # cm
+circle_area = Area.circle(radius)
+print("Circle area is %.2f cm2"%circle_area)
+```
