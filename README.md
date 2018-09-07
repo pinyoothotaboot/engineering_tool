@@ -8,7 +8,11 @@ The tool is a physic formula for Engineering or Science : **Python 3.6+**.
 - Volume Formula
 - Electric Formula
 - Pressure Formula
-- Temperature Formula  
+- Temperature Formula 
+
+# Setup
+- First : Check python version and PIP version
+![](docs/images/check_version.png?raw=true)
 
 
 # Example
