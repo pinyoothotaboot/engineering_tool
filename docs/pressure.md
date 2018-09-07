@@ -94,63 +94,39 @@ Pressure formula:
     - ![torr = {psi}\cdot{51.71493}](https://latex.codecogs.com/svg.latex?torr%20=%20{psi}\cdot{51.71493})
 
 # Example
+```python
+from engineering_tool.pressures import *
 
-**from** engineering_tool.pressures **import** *
-
-**def** SimplePressure():
-
+def SimplePressure():
     force = 500   # N
-
 	area  = 4.5     # m^2
+	p = Pressure.ForceAndArea(force,area)
+	print("Pressure is %.2f Pascal"%p)
+	print("Pressure is %.2f Bar"%Pressure.PascalToBar(p))
 
-	p1 = Pressure.ForceAndArea(force,area)
-
-	print("Pressure is %.2f Pascal"%p1)
-
-	print("Pressure is %.2f Bar"%Pressure.PascalToBar(p1))
-
-**def** KineticPressure():
-
+def KineticPressure():
 	volume = 4  # Cubic
-
 	velocity  =  10.5 . # m/s
-
 	mass       =  50   # 
-    
 	p = Pressure.KineticMass(volume,velocity,mass)
-
 	print("Pressure is %.3f Pascal"%p)
-
 	print("Pressure is %f atm"%Pressure.PascalToAtm(p))
 
-**def** PotentialPressure():
-
+def PotentialPressure():
 	volume    = 4   # Cubic
-
 	mass        = 100   # Kg
-
 	height      = 300   # Metre
-
 	p = Pressure.PotentialMass(volume,mass,height)
-
 	print("Pressure is %.3f Pascal"%p)
-
 	print("Pressure is %.4f Torr"%Pressure.PascalToTorr(p))
 	
-**def** GasPressure():
-
+def GasPressure():
 	volume = 4            # Lite
-
 	n            = 0.056    # mol	
-
 	R            = 0.08206    # (Lite x atm)/(mol x K)
-
 	T            = 500       # K
-
 	p = Pressure.Gas(volume,n,R,T)
-
 	print("Pressure is %f atm"%p)
-
 	print("Pressure is %f psi"%Pressure.AtmToPsi(p))
 
-
+```
