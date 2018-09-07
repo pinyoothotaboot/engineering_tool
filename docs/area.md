@@ -15,6 +15,21 @@
 from engineering_tool.areas import Area
 s = 2.5 # cm
 equilateral_area = Area.equilateral(s)
-print("Equilateral triangle area is %.2f cm2"%equilateral_area = Area.equilateral(s)
-)
+print("Equilateral triangle area is %.2f cm2"%equilateral_area)
+```
+**2.Triangle area**
+	![area = \frac{1}{2}bh](https://latex.codecogs.com/svg.latex?area%20=%20\frac{1}{2}bh)
+	
+**b** and  **h** are the base and height (measured perpendicular to the base), respectively.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/72/Triangle.Right.svg)
+
+```python
+from engineering_tool.areas import Area
+base = 3 # cm
+height = 4 # cm 
+triangle_area = Area.triangle(base,height)
+print("Triangle area is %.2f cm2"%triangle_area)
 ```
