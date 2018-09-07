@@ -163,51 +163,51 @@ class Power:
         Function    : kVAOnePhaseAC
         Description : This function to calculate power in KiloVoltAmp AC 1 Phase.
                       115 , 208 , 220 , 230 ,240 volt
-        Formula     : (I x E ) / 1000
+        Formula     : kVA x PF
         Input       : 
-                      - Current(I) number type integer or float
-                      - Voltage AC(E) number type integer or float
-        Return      : Power kVA in type interger or float
+                      - kVA number type integer or float
+                      - PF  number type integer or float
+        Return      : Power kW in type interger or float
         Example     : kVAOnePhaseAC(4,250)
                     >> 1
     """
-    def kVAOnePhaseAC(current,voltage):
-        if type(current) not in [int,float]:
-            raise TypeError("The current must be a non-negative real number.")
-        if type(voltage) not in [int,float]:
-            raise TypeError("The voltage must be a non-negative real number.")
+    def kVAOnePhaseAC(kVA,PF):
+        if type(kVA) not in [int,float]:
+            raise TypeError("The kVA must be a non-negative real number.")
+        if type(PF) not in [int,float]:
+            raise TypeError("The PF must be a non-negative real number.")
        
-        if current < 0:
-            raise ValueError("The current cannot be negative.")
-        if voltage < 0:
-            raise ValueError("The voltage cannot be negative.")
+        if kVA < 0:
+            raise ValueError("The kVA cannot be negative.")
+        if PF < 0:
+            raise ValueError("The PF cannot be negative.")
 
-        return (current * voltage) / 1000
+        return kVA * PF
 
     """
         Function    : kVAThreePhaseAC
         Description : This function to calculate power in KiloVoltAmp AC 3 Phase.
                       all volt
-        Formula     : (I x E x 1.73) / 1000
+        Formula     : kVA x  1.73 x PF
         Input       : 
-                      - Current(I) number type integer or float
-                      - Voltage AC(E) number type integer or float
-        Return      : Power kVA in type interger or float
+                      - kVA number type integer or float
+                      - PF number type integer or float
+        Return      : Power kW in type interger or float
         Example     : kVAThreePhaseAC(4,250)
                     >> 1.73
     """
-    def kVAThreePhaseAC(current,voltage):
-        if type(current) not in [int,float]:
-            raise TypeError("The current must be a non-negative real number.")
-        if type(voltage) not in [int,float]:
-            raise TypeError("The voltage must be a non-negative real number.")
+    def kVAThreePhaseAC(kVA,PF):
+        if type(kVA) not in [int,float]:
+            raise TypeError("The kVA must be a non-negative real number.")
+        if type(PF) not in [int,float]:
+            raise TypeError("The PF must be a non-negative real number.")
        
-        if current < 0:
-            raise ValueError("The current cannot be negative.")
-        if voltage < 0:
-            raise ValueError("The voltage cannot be negative.")
+        if kVA < 0:
+            raise ValueError("The kVA cannot be negative.")
+        if PF < 0:
+            raise ValueError("The PF cannot be negative.")
 
-        return (current * voltage * 1.73) / 1000
+        return kVA * PF * 1.73
 
 class Current:
 
