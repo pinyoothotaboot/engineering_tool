@@ -154,6 +154,97 @@ The radius and angle (in radians).
 ```python
 from engineering_tool.areas import Area
 radius = 7 # cm
+angle = 0.5 # radian
 circularsector_area = Area.circularsector(radius,angle)
 print("Circular sector area is %.2f cm2"%circularsector_area)
 ```
+
+**10.Cylinder**
+
+![area={2}\pi{r}(r+h)](https://latex.codecogs.com/svg.latex?area={2}\pi{r}(r+h))
+
+**r** and **h** are the radius and height, respectively.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/36/Circular_cylinder_rh.svg)
+
+```python
+from engineering_tool.areas import Area
+radius = 7 # cm
+height = 20 # cm
+cylinder_area = Area.cylinder(radius,height)
+print("Cylinder area is %.2f cm2"%cylinder_area)
+```
+
+**11.Sphere**
+
+![area = {4}\pi{r^2}](https://latex.codecogs.com/svg.latex?area%20=%20{4}\pi{r^2})
+
+**r** the radius, respectively.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/0/07/Sphere_and_Ball.png)
+
+```python
+from engineering_tool.areas import Area
+radius = 7 # cm
+sphere_area = Area.sphere(radius)
+print("Sphere area is %.2f cm2"%sphere_area)
+```
+
+**12.Pyramid**
+
+![area = {B}+\frac{PL}{2}](https://latex.codecogs.com/svg.latex?area%20=%20{B}+\frac{PL}{2})
+
+**B** is the base area, **P** is the base perimeter and **L** is the slant height.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/91/Pyramid.svg)
+
+```python
+from engineering_tool.areas import Area
+base = 7 # cm
+perimeter = 8 # cm
+height = 10 # cm
+pyramid_area = Area.pyramid(base,perimeter,height)
+print("Pyramid area is %.2f cm2"%pyramid_area)
+```
+
+**13.Square**
+
+![area = {s^2}](https://latex.codecogs.com/svg.latex?area%20=%20{s^2})
+
+**s** is the length of one side of the square.
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/60/Five_Squared.svg)
+
+```python
+from engineering_tool.areas import Area
+s = 7 # cm
+square_area = Area.square(s)
+print("Square area is %.2f cm2"%square_area)
+```
+
+**14.Rectangle**
+
+![area = {b}{h}](https://latex.codecogs.com/svg.latex?area%20=%20{b}{h})
+
+**b**  and **h** is base length and height
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/d/d7/Rectangle_Geometry_Vector.svg)
+
+```python
+from engineering_tool.areas import Area
+base = 7 # cm
+height = 9 # cm
+rectangle_area = Area.rectangle(base,height)
+print("Rectangle area is %.2f cm2"%rectangle_area)
+```
+
