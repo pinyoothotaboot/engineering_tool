@@ -3,28 +3,28 @@ import math
 class Area:
 
     """
-        Function    : circlesector
-        Description : This function to calculate area of circle sector.
-        Formula     : degree/2 x radius^2
+        Function    : circularsector
+        Description : This function to calculate area of circular sector.
+        Formula     : angle/2 x radius^2
         Input       : 
                       - Radius number type integer or float
-                      - Degree number type integer or float
+                      - Angle number type integer or float
         Return      : Area of circle sector in type interger or float
-        Example     : circlesector(1)
+        Example     : circularsector(1,0)
                     >> 3.1416
     """
-    def circlesector(radius,degree):
+    def circularsector(radius,angle):
         if type(radius) not in [int,float]:
             raise TypeError("The radius must be a non-negative real number.")
-        if type(degree) not in [int,float]:
+        if type(angle) not in [int,float]:
             raise TypeError("The degree must be a non-negative real number.")
 
         if radius < 0:
             raise ValueError("The radius cannot be negative.")
-        if degree < 0:
+        if angle < 0:
             raise ValueError("The degree cannot be negative.")
 
-        return (degree/2)*(radius**2)
+        return (angle/2)*(radius**2)
     
     """
         Function    : circle

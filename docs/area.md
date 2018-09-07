@@ -140,3 +140,20 @@ radius = 7 # cm
 circle_area = Area.circle(radius)
 print("Circle area is %.2f cm2"%circle_area)
 ```
+
+**9.Circular sector**
+
+![area = \frac{\theta}{2}{r^2}](https://latex.codecogs.com/svg.latex?area%20=%20\frac{\theta}{2}{r^2})
+
+The radius and angle (in radians).
+
+**Example**
+
+![](https://upload.wikimedia.org/wikipedia/commons/d/da/Circle_arc.svg)
+
+```python
+from engineering_tool.areas import Area
+radius = 7 # cm
+circularsector_area = Area.circularsector(radius,angle)
+print("Circular sector area is %.2f cm2"%circularsector_area)
+```
