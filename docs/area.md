@@ -3,7 +3,8 @@
 
 # Reference
 **Equilateral triangle area**
-	$$area = \frac{\sqrt{3}}{4}{s^2}$$ 
+
+$$area = \frac{\sqrt{3}}{4}{s^2}$$ 
 	
 **s** is the length of one side of the triangle.
 
