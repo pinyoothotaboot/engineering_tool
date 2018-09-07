@@ -3,10 +3,14 @@ from engineering_tool.areas import *
 from engineering_tool.units import Unit,Convert
 
 
-value = 12 # inch
+value = 1 # inch
 
+
+mili = 1 # Km
+
+print("In centrimetre = %f cm"%Convert(mili).ToDeci())
  
-print("1 Centrimeter = %.9f"%Unit(value).InchToCentrimetre().ToUnit())
+print("1 Centrimeter = %.9f"%Unit(value).InchToCentrimetre().ToDeci())
 
 
 base = 10 

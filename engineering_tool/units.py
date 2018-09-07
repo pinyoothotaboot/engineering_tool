@@ -9,43 +9,43 @@ class Convert:
         else:
             self.n = n
 
-    def ToPico(self):
+    def ToTera(self):
         return self.n * 1000000000000
     
-    def ToNano(self):
+    def ToGiga(self):
         return self.n * 1000000000
     
-    def ToMicro(self):
+    def ToMega(self):
         return self.n * 1000000
     
-    def ToMilli(self):
+    def ToKilo(self):
         return self.n * 1000
     
-    def ToCentri(self):
+    def ToHecto(self):
         return self.n * 100
     
-    def ToDeci(self):
+    def ToDeca(self):
         return self.n * 10
     
     def ToUnit(self):
         return self.n
     
-    def ToDeca(self):
+    def ToDeci(self):
         return self.n * (1/10)
     
-    def ToHecto(self):
+    def ToCentri(self):
         return self.n * (1/100)
     
-    def ToKilo(self):
+    def ToMilli(self):
         return self.n * (1/1000)
     
-    def ToMega(self):
+    def ToMicro(self):
         return self.n * (1/1000000)
     
-    def ToGiga(self):
+    def ToNano(self):
         return self.n * (1/1000000000)
     
-    def ToTera(self):
+    def ToPico(self):
         return self.n * (1/1000000000000)
 
 class Unit:
@@ -59,16 +59,22 @@ class Unit:
             self.n = n
     
     def CentrimetreToInch(self):
-        return Convert(self.n * 0.393701)
+        return Convert(self.n * 0.39370078740157)
     
     def CentrimetreToFoot(self):
-        return Convert(self.n * 0.0328084)
+        return Convert(self.n * 0.032808398950131)
     
     def CentrimetreToYard(self):
-        return Convert(self.n * 0.010936133333333)
+        return Convert(self.n * 0.010936132983377)
+    
+    def CentrimetreMile(self):
+        return Convert(self.n * 0.0000062137119223733)
+    
+    def CentrimetreNauticalMile(self):
+        return Convert(self.n * 0.0000053995680345572)
     
     def InchToCentrimetre(self):
-        return Convert(self.n / 0.393701)
+        return Convert(self.n * 2.54)
 
 
 
