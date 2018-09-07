@@ -98,9 +98,9 @@ Pressure formula:
 from engineering_tool.pressures import *
 
 def SimplePressure():
-    
-    force = 500   # N
-    area  = 4.5   # m^2
+
+        force = 500   # N
+        area  = 4.5   # m^2
 	p = Pressure.ForceAndArea(force,area)
 	print("Pressure is %.2f Pascal"%p)
 	print("Pressure is %.2f Bar"%Pressure.PascalToBar(p))
