@@ -14,9 +14,7 @@
 - Power Factor : **PF**
 - Efficiency : **Eff**
 
-# Conversion
-
-**1. Find power**
+# 1. Find power
 
 ![P = VI = \frac{V^2}{R} = {I^2}{R} ](https://latex.codecogs.com/svg.latex?P%20=%20VI%20=%20\frac{V^2}{R}%20=%20{I^2}{R})
 
