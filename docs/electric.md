@@ -268,3 +268,233 @@ I = Current.kVAAndVoltageOnePhaseAC(kVA,E)
 print("Current is %.2f A"%I)
 ```
 
+# 3. Find resistance
+
+![R = \frac{V^2}{P}=\frac{V}{I}=\frac{P}{I^2}](https://latex.codecogs.com/svg.latex?R%20=%20\frac{V^2}{P}=\frac{V}{I}=\frac{P}{I^2})
+
+**V** = Voltage
+**P** = Power
+**I** = Current
+
+**Example**
+
+```python
+from engineering_tool.electrics import Resistance
+
+V = 12  # Volt
+P = 500 # Watt
+I = 2.5 # A
+R1 = Resistance.VoltageAndPower(V,P)
+R2 = Resistance.PowerAndCurrent(P,I)
+R3 = Resistance.VoltageAndCurrent(V,I)
+
+print("Resistance is %.2f Ohm"%R1)
+print("Resistance is %.2f Ohm"%R2)
+print("Resistance is %.2f Ohm"%R3)
+```
+
+# 3. Find resistance
+
+![R = \frac{V^2}{P}=\frac{V}{I}=\frac{P}{I^2}](https://latex.codecogs.com/svg.latex?R%20=%20\frac{V^2}{P}=\frac{V}{I}=\frac{P}{I^2})
+
+**V** = Voltage
+**P** = Power
+**I** = Current
+
+**Example**
+
+```python
+from engineering_tool.electrics import Resistance
+
+V = 12  # Volt
+P = 500 # Watt
+I = 2.5 # A
+R1 = Resistance.VoltageAndPower(V,P)
+R2 = Resistance.PowerAndCurrent(P,I)
+R3 = Resistance.VoltageAndCurrent(V,I)
+
+print("Resistance is %.2f Ohm"%R1)
+print("Resistance is %.2f Ohm"%R2)
+print("Resistance is %.2f Ohm"%R3)
+```
+
+# 4. Find voltage
+
+![V = IR=\frac{P}{I}=\sqrt(PR)](https://latex.codecogs.com/svg.latex?V%20=%20IR=\frac{P}{I}=\sqrt(PR))
+
+**I** = Current
+**R** = Resistance
+**P** = Power
+
+**Example**
+
+```python
+from engineering_tool.electrics import Voltage
+
+R = 1200  # Ohm
+P = 500 # Watt
+I = 2.5 # A
+
+V1 = Voltage.CurrentAndResistance(I,R)
+V2 = Voltage.PowerAndCurrent(P,I)
+V3 = Voltage.PowerAndResistance(P,R)
+
+print("Voltage is %.2f Volt"%V1)
+print("Voltage is %.2f Volt"%V2)
+print("Voltage is %.2f Volt"%V3)
+```
+
+**Voltage DC** , Known , HP
+
+![V = \frac{HP\cdot 746}{I\cdot Eff}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{HP\cdot%20746}{I\cdot%20Eff})
+
+**HP** = Hose power
+**I** = Current DC
+**Eff** = Efficiency
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+HP = 1.5 # HP
+Eff = 0.5 # Eff
+I = 2.5 # A
+
+V = Voltage.HPAndEfficiencyAndCurrentDC(HP,I,Eff)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage 1 phase AC** , Known , HP
+
+![V = \frac{HP\cdot 746}{I\cdot Eff\cdot PF}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{HP\cdot%20746}{I\cdot%20Eff\cdot%20PF})
+
+**HP** = Hose power
+**I** = Current
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+HP = 1.5 # HP
+Eff = 0.5 # Eff
+I = 2.5 # A
+PF = 0.7
+V = Voltage.HPAndEfficiencyAndCurrentAndPFOnePhaseAC(HP,I,Eff,PF)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage 3 phase AC** , Known , HP
+
+![V = \frac{HP\cdot 746}{1.73 \cdot I \cdot Eff \cdot PF}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{HP\cdot%20746}{1.73%20\cdot%20I%20\cdot%20Eff%20\cdot%20PF})
+
+**HP**  = Hose power
+**I** = Current
+**Eff** = Efficiency
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+HP = 1.5 # HP
+Eff = 0.5 # Eff
+I = 2.5 # A
+PF = 0.7
+V = Voltage.HPAndEfficiencyAndCurrentAndPFThreePhaseAC(HP,I,Eff,PF)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage 1 phase AC** , Known , kW
+
+![V = \frac{kW\cdot1000}{I\cdot PF}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{kW\cdot1000}{I\cdot%20PF})
+
+**kW** = Power in kilowatt
+**I** = Current
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+kW = 1.5 # kW
+I = 2.5 # A
+PF = 0.7
+V = Voltage.kWAndCurrentAndPFOnePhaseAC(kW,I,PF)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage 3 phase AC** , Known , kW
+
+![V = \frac{kW\cdot 1000}{1.73\cdot I \cdot PF}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{kW\cdot%201000}{1.73\cdot%20I%20\cdot%20PF})
+
+**kW** = Power in kilowatt
+**I** = Current
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+kW = 1.5 # kW
+I = 2.5 # A
+PF = 0.7
+V = Voltage.kWAndCurrentAndPFThreePhaseAC(kW,I,PF)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage 1 phase AC** , Known , kVA
+
+![V = \frac{kVA\cdot 1000}{I}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{kVA\cdot%201000}{I})
+
+**kVA** = KiloVoltAmp
+**I** = Current
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+kVA = 1.5 # kVA
+I = 2.5 # A
+V = Voltage.kVAAndCurrentOnePhaseAC(kVA,I)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage 3 phase AC** , Known , kVA
+
+![V = \frac{kVA\cdot 1000}{1.763\cdot I }](https://latex.codecogs.com/svg.latex?V%20=%20\frac{kVA\cdot%201000}{1.763\cdot%20I%20})
+
+**kVA** = KiloVoltAmp
+**I** = Current
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+kVA = 1.5 # kVA
+I = 2.5 # A
+V = Voltage.kVAAndCurrentThreePhaseAC(kVA,I)
+print("Voltage is %.2f Volt"%V)
+```
+
+**Voltage ** , Known **Q,C**
+
+![V = \frac{Q}{C}](https://latex.codecogs.com/svg.latex?V%20=%20\frac{Q}{C})
+
+**Q** = Coulomb
+**C** = Capacitance
+
+**Example**
+```python
+from engineering_tool.electrics import Voltage
+
+Q = 1.5 # Coulomb
+C = 2.5 # Farad
+V = Voltage.CoulombAndFarad(Q,C)
+print("Voltage is %.2f Volt"%V)
+```
+
+
+
+
+
