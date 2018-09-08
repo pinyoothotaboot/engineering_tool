@@ -293,31 +293,6 @@ print("Resistance is %.2f Ohm"%R2)
 print("Resistance is %.2f Ohm"%R3)
 ```
 
-# 3. Find resistance
-
-![R = \frac{V^2}{P}=\frac{V}{I}=\frac{P}{I^2}](https://latex.codecogs.com/svg.latex?R%20=%20\frac{V^2}{P}=\frac{V}{I}=\frac{P}{I^2})
-
-**V** = Voltage
-**P** = Power
-**I** = Current
-
-**Example**
-
-```python
-from engineering_tool.electrics import Resistance
-
-V = 12  # Volt
-P = 500 # Watt
-I = 2.5 # A
-R1 = Resistance.VoltageAndPower(V,P)
-R2 = Resistance.PowerAndCurrent(P,I)
-R3 = Resistance.VoltageAndCurrent(V,I)
-
-print("Resistance is %.2f Ohm"%R1)
-print("Resistance is %.2f Ohm"%R2)
-print("Resistance is %.2f Ohm"%R3)
-```
-
 # 4. Find voltage
 
 ![V = IR=\frac{P}{I}=\sqrt(PR)](https://latex.codecogs.com/svg.latex?V%20=%20IR=\frac{P}{I}=\sqrt(PR))
@@ -494,6 +469,71 @@ V = Voltage.CoulombAndFarad(Q,C)
 print("Voltage is %.2f Volt"%V)
 ```
 
+# 5. Find conductance
+
+![G=\frac{1}{R}=\frac{I}{V}](https://latex.codecogs.com/svg.latex?G=\frac{1}{R}=\frac{I}{V})
+
+**G** = Conductance
+**R** = Resistance
+**I** = Current
+**V** = Voltage
+
+**Example**
+```python
+from engineering_tool.electrics import Conductance
+
+R = 1500 # Ohm
+I = 2.5 # A
+V = 30 # Volt
+
+G1 = Conductance.Resistance(R)
+G2 = Conductance.VoltageAndCurrent(V,I)
+print("Conductance is %.2f G"%G1)
+print("Conductance is %.2f G"%G2)
+```
+
+# 6. Find capacitance
+
+![C = \frac{Q}{V}](https://latex.codecogs.com/svg.latex?C%20=%20\frac{Q}{V})
+
+**C** = Farad
+**Q** = Coulomb
+**V** = Volt
+
+**Example**
+```python
+from engineering_tool.electrics import Conductance
+
+Q = 1.5 # Coulomb
+V = 2.5 # Volt
+
+C = Conductance.Rarad(Q,V)
+print("Capacitance is %.2f F"%C)
+```
+
+```python
+from engineering_tool.electrics import Conductance
+
+C = 1.5 # Farad
+V = 2.5 # Volt
+Q = Conductance.Coulomb(C,V)
+print("Coulomb is %.2f Q"%Q)
+```
+
+# 7. Find frequency
+
+$$f=\frac{1}{T}$$
+
+**f** = Frequency(Hz)
+**T** = Period time(s)
+
+**Example**
+```python
+from engineering_tool.electrics import Frequency
+T = 1 # Sec
+F = Frequency.Hertz(T)
+print("Frequency is %.2f Hz"%F)
+```
 
 
 
