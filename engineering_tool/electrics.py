@@ -214,7 +214,7 @@ class Current:
     """
         Function    : PowerAndResistance
         Description : This function to calculate current.
-        Formula     : I^2 x R
+        Formula     : sqrt(P / R)
         Input       : 
                       - Power(W) number type integer or float
                       - Resistance(R) number type integer or float
