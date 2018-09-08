@@ -535,6 +535,209 @@ F = Frequency.Hertz(T)
 print("Frequency is %.2f Hz"%F)
 ```
 
+```python
+from engineering_tool.electrics import Frequency
+f = 1 # Hz
+T = Frequency.Sec(f)
+print("Period time is %.2f s"%T)
+```
+
+# 8. Find Hose power
+
+**DC**
+
+![HP = \frac{I\cdot E \cdot Eff}{746}](https://latex.codecogs.com/svg.latex?HP%20=%20\frac{I\cdot%20E%20\cdot%20Eff}{746})
+
+**I** = Current
+**E** = Voltage
+**Eff** = Efficiency
+
+**Example**
+```python
+from engineering_tool.electrics import Hosepower
+I = 1.5 # A
+E = 24  # Volt
+Eff = 0.7
+HP = Hosepower.DC(I,E,Eff)
+print("Hose power is %.2f hp"%HP)
+```
+
+**1 Phase AC**
+
+![](https://latex.codecogs.com/svg.latex?HP%20=%20\frac{I\cdot%20E%20\cdot%20Eff%20\cdot%20PF}{746})
+
+**I** = Current
+**E** = Voltage
+**Eff** = Efficiency
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Hosepower
+I = 6.5 # A
+E = 220  # Volt
+Eff = 0.7
+PF = 0.8
+HP = Hosepower.OnePhaseAC(I,E,Eff,PF)
+print("Hose power is %.2f hp"%HP)
+```
+
+**3 Phase AC**
+
+![](https://latex.codecogs.com/svg.latex?HP%20=%20\frac{1.73\cdot%20I\cdot%20E%20\cdot%20Eff%20\cdot%20PF}{746})
+
+**I** = Current
+**E** = Voltage
+**Eff** = Efficiency
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Hosepower
+I = 6.5 # A
+E = 115  # Volt
+Eff = 0.7
+PF = 0.8
+HP = Hosepower.ThreePhaseAC(I,E,Eff,PF)
+print("Hose power is %.2f hp"%HP)
+```
+
+# 9. Find power factor
+
+**1 phase AC** , Known **HP**
+
+![PF = \frac{HP\cdot 746}{E \cdot Eff \cdot I}](https://latex.codecogs.com/svg.latex?PF%20=%20\frac{HP\cdot%20746}{E%20\cdot%20Eff%20\cdot%20I})
+
+**HP** = Hose power
+**E** = Voltage
+**Eff** = Efficiency
+**I** = Current
+
+**Example**
+```python
+from engineering_tool.electrics import Powerfactor
+HP = 2.5 # HP
+I = 6.5 # A
+E = 115  # Volt
+Eff = 0.7
+PF = Powerfactor.HPAndVoltageAndEfficiencyAndCurrentOnePhaseAC(HP,I,E,Eff)
+print("Power factor is %.2f"%PF)
+```
+
+**3 phase AC** , Known **HP**
+
+![](https://latex.codecogs.com/svg.latex?PF%20=%20\frac{HP\cdot%20746}{1.73\cdot%20E%20\cdot%20Eff%20\cdot%20I})
+
+**HP** = Hose power
+**E** = Voltage
+**Eff** = Efficiency
+**I** = Current
+
+**Example**
+```python
+from engineering_tool.electrics import Powerfactor
+HP = 2.5 # HP
+I = 6.5 # A
+E = 115  # Volt
+Eff = 0.7
+PF = Powerfactor.HPAndVoltageAndEfficiencyAndCurrentThreePhaseAC(HP,I,E,Eff)
+print("Power factor is %.2f"%PF)
+```
+
+**1 phase AC** , Known **kW**
+
+![PF = \frac{kW\cdot 1000}{I\cdot E}](https://latex.codecogs.com/svg.latex?PF%20=%20\frac{kW\cdot%201000}{I\cdot%20E})
+
+**kW** = Power in kilowatt
+**I** = Current
+**E** = Voltage
+
+**Example**
+```python
+from engineering_tool.electrics import Powerfactor
+kW = 2.5 # kW
+I = 6.5 # A
+E = 115  # Volt
+PF = Powerfactor.kWAndCurrentAndVoltageOnePhaseAC(kW,I,E)
+print("Power factor is %.2f"%PF)
+```
+
+**3 phase AC** , Known **kW**
+
+![](https://latex.codecogs.com/svg.latex?PF%20=%20\frac{kW\cdot%201000}{1.73\cdot%20I\cdot%20E})
+
+**kW** = Power in kilowatt
+**I** = Current
+**E** = Voltage
+
+**Example**
+```python
+from engineering_tool.electrics import Powerfactor
+kW = 2.5 # kW
+I = 6.5 # A
+E = 115  # Volt
+PF = Powerfactor.kWAndCurrentAndVoltageThreePhaseAC(kW,I,E)
+print("Power factor is %.2f"%PF)
+```
+
+# 10. Find efficiency
+
+**DC** , Known **HP**
+
+![Eff = \frac{HP\cdot 746}{E\cdot I}](https://latex.codecogs.com/svg.latex?Eff%20=%20\frac{HP\cdot%20746}{E\cdot%20I})
+
+**HP** = Hose power
+**E** = Voltage
+**I** = Current
+
+**Example**
+```python
+from engineering_tool.electrics import Efficiency
+HP = 2.5 # kW
+I = 6.5 # A
+E = 115  # Volt
+Eff = Efficiency.DC(HP,E,I)
+print("Efficiency is %.2f"%PF)
+```
+
+**1 phase AC** , Known **HP**
+
+![](https://latex.codecogs.com/svg.latex?Eff%20=%20\frac{HP\cdot%20746}{E\cdot%20I\cdot%20PF})
+
+**HP** = Hose power
+**E** = Voltage
+**I** = Current
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Efficiency
+HP = 2.5 # kW
+I = 6.5 # A
+E = 115  # Volt
+PF = 0.8
+Eff = Efficiency.OnePhaseAC(HP,E,I,PF)
+print("Efficiency is %.2f"%PF)
+```
+
+**3 phase AC** , Known **HP**
+![](https://latex.codecogs.com/svg.latex?Eff%20=%20\frac{HP\cdot%20746}{1.73\cdot%20E\cdot%20I\cdot%20PF})
+
+**HP** = Hose power
+**E** = Voltage
+**I** = Current
+**PF** = Power factor
+
+**Example**
+```python
+from engineering_tool.electrics import Efficiency
+HP = 2.5 # kW
+I = 6.5 # A
+E = 115  # Volt
+PF = 0.8
+Eff = Efficiency.ThreePhaseAC(HP,E,I,PF)
+print("Efficiency is %.2f"%PF)
+```
 
 
 
