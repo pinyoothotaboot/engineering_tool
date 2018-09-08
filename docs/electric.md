@@ -721,6 +721,7 @@ print("Efficiency is %.2f"%PF)
 ```
 
 **3 phase AC** , Known **HP**
+
 ![](https://latex.codecogs.com/svg.latex?Eff%20=%20\frac{HP\cdot%20746}{1.73\cdot%20E\cdot%20I\cdot%20PF})
 
 **HP** = Hose power
