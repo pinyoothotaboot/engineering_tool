@@ -18,9 +18,9 @@
 
 ![P = VI = \frac{V^2}{R} = {I^2}{R} ](https://latex.codecogs.com/svg.latex?P%20=%20VI%20=%20\frac{V^2}{R}%20=%20{I^2}{R})
 
-V = Voltage
-I  = Electric current 
-R = Resistance
+**V** = Voltage
+**I**  = Electric current 
+**R** = Resistance
 
 **Example**
 
@@ -46,9 +46,9 @@ print("Power is %.2f Kw"%P4)
 
 ![P = \frac{I\cdot E \cdot PF}{1000}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{I\cdot%20E%20\cdot%20PF}{1000})
 
-I  = AC current
-E = AC voltage
-PF = Power factor
+**I**  = AC current
+**E** = AC voltage
+**PF** = Power factor
 
 **Example**
 ```python
@@ -66,6 +66,10 @@ print("Power is %.2f kW"%Power_1P)
 
 ![P = \frac{1.73 \cdot I \cdot E \cdot PF}{1000}](https://latex.codecogs.com/svg.latex?P%20=%20\frac{1.73%20\cdot%20I%20\cdot%20E%20\cdot%20PF}{1000})
 
+**I**  = AC current
+**E** = AC voltage
+**PF** = Power factor
+
 **Example**
 ```python
 from engineering_tool.electrics import Power
@@ -81,9 +85,9 @@ print("Power is %.2f kW"%Power_3P)
 
 ![P = kVA \cdot PF](https://latex.codecogs.com/svg.latex?P%20=%20kVA%20\cdot%20PF)
 
-P  = Power : KiloWatt
-kVA = KiloVoltAmp
-PF = Power factor
+**P**  = Power : KiloWatt
+**kVA** = KiloVoltAmp
+**PF** = Power factor
 
 **Example**
 ```python
@@ -98,6 +102,10 @@ print("Power is %.2f kW"%Power_1P)
 3 phase AC , Known **kVA**
 
 ![](https://latex.codecogs.com/svg.latex?P%20=%20kVA%20\cdot%20PF\cdot{1.73})
+
+**P**  = Power : KiloWatt
+**kVA** = KiloVoltAmp
+**PF** = Power factor
 
 **Example**
 ```python
@@ -138,11 +146,11 @@ print("Current is %.2f A"%I3)
 
 **Current DC** , Known , HP
 
-$$I = \frac{HP\cdot{746}}{E\cdot Eff}$$
+![I = \frac{HP\cdot{746}}{E\cdot Eff}](https://latex.codecogs.com/svg.latex?I%20=%20\frac{HP\cdot{746}}{E\cdot%20Eff})
 
-HP = Hose power
-E    = Voltage
-Eff = Efficiency
+**HP** = Hose power
+**E**    = Voltage
+**Eff** = Efficiency
 
 **Example**
 
@@ -161,11 +169,11 @@ print("Current is %.2f A"%I)
 
 ![I = \frac{HP\cdot 746}{E\cdot Eff \cdot PF}](https://latex.codecogs.com/svg.latex?I%20=%20\frac{HP\cdot%20746}{E\cdot%20Eff%20\cdot%20PF})
 
-I = Current
-HP = Hose power
-E = Voltage AC
-Eff = Efficiency
-PF = Power factor
+**I** = Current
+**HP** = Hose power
+**E** = Voltage AC
+**Eff** = Efficiency
+**PF** = Power factor
 
 **Example**
 
@@ -183,11 +191,11 @@ print("Current is %.2f A"%I)
 
 ![](https://latex.codecogs.com/svg.latex?I%20=%20\frac{HP\cdot%20746}{1.73\cdot%20E\cdot%20Eff%20\cdot%20PF})
 
-I = Current
-HP = Hose power
-E = Voltage AC
-Eff = Efficiency
-PF = Power factor
+**I** = Current
+**HP** = Hose power
+**E** = Voltage AC
+**Eff** = Efficiency
+**PF** = Power factor
 
 **Example**
 
@@ -206,9 +214,9 @@ print("Current is %.2f A"%I)
 
 ![I =  \frac{kW\cdot 1000}{E\cdot PF}](https://latex.codecogs.com/svg.latex?I%20=%20\frac{kW\cdot%201000}{E\cdot%20PF})
 
-kW = Power in KiloWatt
-E = Voltage AC 1 phase
-PF = Power factor
+**kW** = Power in KiloWatt
+**E** = Voltage AC 1 phase
+**PF** = Power factor
 
 **Example**
 
@@ -226,9 +234,9 @@ print("Current is %.2f A"%I)
 
 ![I = \frac{kW\cdot 1000}{1.73\cdot E\cdot PF}](https://latex.codecogs.com/svg.latex?I%20=%20\frac{kW\cdot%201000}{1.73\cdot%20E\cdot%20PF})
 
-kW = Power in KiloWatt
-E = Voltage AC 3 phase
-PF = Power factor
+**kW** = Power in KiloWatt
+**E** = Voltage AC 3 phase
+**PF** = Power factor
 
 **Example**
 
@@ -246,8 +254,8 @@ print("Current is %.2f A"%I)
 
 ![](https://latex.codecogs.com/svg.latex?I=%20\frac{kVA\cdot%201000}{E})
 
-kVA = KiloVoltAmp
-E = Voltage 1 phase AC
+**kVA** = KiloVoltAmp
+**E** = Voltage 1 phase AC
 
 **Example**
 
